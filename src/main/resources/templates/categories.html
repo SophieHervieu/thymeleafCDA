@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des catégories</title>
+</head>
+<body>
+      <h2>Liste des catégories</h2>
+      <div th:each="cat : ${category}">
+        <p th:text="${'Catégorie : ' + cat.libelle}">Catégorie</p>
+      </div>
+</body>
+</html>

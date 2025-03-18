@@ -1,9 +1,6 @@
 package com.adrar.sitecda.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="produit")
@@ -17,6 +14,10 @@ public class Produit {
     @Column(name="description", nullable = false, length = 50)
     private String description;
     private Double price;
+
+    @ManyToOne
+    @JoinColumn(name="produit_category")
+    private Category category;
 
     public Produit() {}
 
